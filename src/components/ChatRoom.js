@@ -6,6 +6,9 @@ class ChatRoom extends Component {
         super(props,context)
         this.updateMessage = this.updateMessage.bind(this)
         this.submitMessage = this.submitMessage.bind(this)
+        this.props = {
+            name: ''
+        },
         this.state = {
             message: '',
             messages: []
@@ -14,7 +17,8 @@ class ChatRoom extends Component {
 
     componentDidMount(){
             console.log('componentDidMount')
-            firebase.database().ref('messages/').on('value',(snapshot)=> {
+            console.log(this.props.name)
+            firebase.database().ref('projects/'+this.props.name+'/messages/').on('value',(snapshot)=> {
 
                 const currentMessages =snapshot.val()
 
@@ -40,7 +44,7 @@ class ChatRoom extends Component {
             id: this.state.messages.length,
             text: this.state.message
         }
-        firebase.database().ref('messages/'+nextMessage.id).set(nextMessage)
+        firebase.database().ref('projects/'+this.props.name+'/messages/'+nextMessage.id).set(nextMessage)
         // var list = Object.assign([], this.state.messages)
         // list.push(nextMessage)
         // this.setState({

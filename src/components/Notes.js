@@ -6,6 +6,9 @@ class Notes extends Component {
         super(props,context)
         this.updateNote = this.updateNote.bind(this)
         this.submitNote = this.submitNote.bind(this)
+        this.props = {
+            name: ''
+        },
         this.state = {
             note: '',
             notes: []
@@ -14,7 +17,7 @@ class Notes extends Component {
 
     componentDidMount(){
         console.log('componentDidMount')
-        firebase.database().ref('notes/').on('value',(snapshot)=> {
+        firebase.database().ref('projects/'+this.props.name+'/notes/').on('value',(snapshot)=> {
 
             const currentNotes = snapshot.val()
 
@@ -40,7 +43,7 @@ class Notes extends Component {
             id: this.state.notes.length,
             text: this.state.note
         }
-        firebase.database().ref('notes/'+nextNote.id).set(nextNote)
+        firebase.database().ref('projects/'+this.props.name+'/notes/'+nextNote.id).set(nextNote)
         // var list = Object.assign([], this.state.messages)
         // list.push(nextMessage)
         // this.setState({

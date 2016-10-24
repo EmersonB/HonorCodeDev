@@ -6,6 +6,9 @@ class MyDropzone extends Component {
     constructor(props,context) {
         super(props,context);
         this.onDrop = this.onDrop.bind(this);
+        this.props = {
+            name: ''
+        },
         this.state = {
             files: []
         }
@@ -13,7 +16,7 @@ class MyDropzone extends Component {
     }
     componentDidMount(){
         console.log('componentDidMount')
-        firebase.database().ref('files/').on('value',(snapshot)=> {
+        firebase.database().ref('projects/'+this.props.name+'/files/').on('value',(snapshot)=> {
 
             const currentFiles = snapshot.val()
 
@@ -32,7 +35,7 @@ class MyDropzone extends Component {
                 id: this.state.files.length+x,
                 item: files[x]
             }
-            firebase.database().ref('files/' + nextFile.id).set(nextFile.item)
+            firebase.database().ref('projects/'+this.props.name+'/files/' + nextFile.id).set(nextFile.item)
         }
     }
     render(){
