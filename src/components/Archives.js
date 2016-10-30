@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import * as firebase from 'firebase'
 import Project from './Project'
 import { Link,Router, Route, IndexRoute, hashHistory } from "react-router";
-import SearchBar from 'react-search-bar';
 import {ListGroup, ListGroupItem, Button, FormControl} from 'react-bootstrap';
 
 class Archives extends Component {

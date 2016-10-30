@@ -39,11 +39,9 @@
       <file leaf-file-name="Archives.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Archives.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="87" column="28" selection-start-line="87" selection-start-column="28" selection-end-line="87" selection-end-column="28" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="45">
+              <caret line="3" column="75" selection-start-line="3" selection-start-column="75" selection-end-line="3" selection-end-column="75" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -288,7 +286,7 @@
       <workItem from="1476028484978" duration="13557000" />
       <workItem from="1477168280265" duration="16607000" />
       <workItem from="1477335262809" duration="919000" />
-      <workItem from="1477767221863" duration="44415000" />
+      <workItem from="1477767221863" duration="44545000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1476300652820</created>
@@ -367,11 +365,18 @@
       <option name="project" value="LOCAL" />
       <updated>1477859224375</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="removed search bar">
+      <created>1477859499729</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1477859499729</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82321000" />
+    <option name="totallyTimeSpent" value="82451000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="704" extended-state="6" />
@@ -433,7 +438,8 @@
     <MESSAGE value="made projects links in the archive" />
     <MESSAGE value="Added Oauth and lots more" />
     <MESSAGE value="finished home page and bootstrap stuff." />
-    <option name="LAST_COMMIT_MESSAGE" value="finished home page and bootstrap stuff." />
+    <MESSAGE value="removed search bar" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed search bar" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -790,11 +796,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Archives.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="87" column="28" selection-start-line="87" selection-start-column="28" selection-end-line="87" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="45">
+          <caret line="3" column="75" selection-start-line="3" selection-start-column="75" selection-end-line="3" selection-end-column="75" />
+          <folding />
         </state>
       </provider>
     </entry>
