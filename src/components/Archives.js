@@ -86,16 +86,6 @@ class Archives extends Component {
         var viewable;
         if (this.state.loggedIn) {
             viewable = <div>
-            <SearchBar className
-            onChange={(searchTerm, resolve) => {
-                console.log(searchTerm)
-
-                // get suggestions asynchronously based on `searchTerm`,
-                // then pass them to `resolve()` to populate suggestions
-            }}
-            onSearch={(searchTerm) => {
-
-            }} />
             <br/>
             <ListGroup>
             {currentProjects}
