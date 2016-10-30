@@ -67,14 +67,6 @@ class App extends Component {
                 </li>;
         }
         return(
-            // <div className = "navbar navbar-default navbar-static-top">
-            //     <Link to="/app'"> Home </Link>
-            //     <Link to="/archives"> Archives </Link>
-            //     <Link to="/login"> Login </Link>
-            //     <Link to="/logout"> Logout </Link>
-            //     <Link to="/register"> Register </Link>
-            //     {this.props.children}
-            // </div>
         <span>
         <nav className="navbar navbar-default navbar-static-top">
             <div className="container">

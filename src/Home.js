@@ -23,7 +23,7 @@ class Home extends Component {
                     <Button bsStyle="default" bsSize="small"> <Link to="/register" className="navbar-brand">Register</Link> </Button>
                     </div>
                     <br/>
-                    <br/> //questionable methods
+                    <br/>
             </Parallax>
 
             </div>
