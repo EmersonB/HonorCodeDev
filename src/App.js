@@ -23,16 +23,90 @@ firebase.initializeApp(config);
 
 
 class App extends Component {
-
-    render(){
-        return(
-            <div className = "nav">
-                <Link to="/app'"> Home </Link>
-                <Link to="/archives"> Archives </Link>
-                {this.props.children}
-            </div>
-        )
+    constructor(props, context){
+        super(props,context)
+        this.state = {
+            loggedIn: (null !== firebase.auth().currentUser)
+        }
     }
+        componentWillMount() {
+        firebase.auth().onAuthStateChanged(firebaseUser => {
+
+            this.setState({
+            loggedIn: (null !== firebaseUser)
+        })
+
+        if (firebaseUser) {
+            console.log("Logged IN", firebaseUser);
+        } else {
+            console.log('Not logged in');
+        }
+    });
+
+    }
+    render(){
+        var loginOrOut;
+        var register;
+        var viewable;
+        if (this.state.loggedIn) {
+            loginOrOut = <li>
+            <Link to="/logout" className="navbar-brand">Logout</Link>
+                </li>;
+            viewable =
+            register = null
+
+
+        } else {
+            loginOrOut = <li>
+            <Link to="/login" className="navbar-brand">Login</Link>
+                </li>;
+            register = <li>
+            <Link to="/register" className="navbar-brand">
+                Register
+                </Link>
+                </li>;
+        }
+        return(
+            // <div className = "navbar navbar-default navbar-static-top">
+            //     <Link to="/app'"> Home </Link>
+            //     <Link to="/archives"> Archives </Link>
+            //     <Link to="/login"> Login </Link>
+            //     <Link to="/logout"> Logout </Link>
+            //     <Link to="/register"> Register </Link>
+            //     {this.props.children}
+            // </div>
+        <span>
+        <nav className="navbar navbar-default navbar-static-top">
+            <div className="container">
+            <div className="navbar-header">
+            <Link to="/" className="navbar-brand">
+            Honor Code
+        </Link>
+        </div>
+        <ul className="nav navbar-nav pull-right">
+            <li>
+            <Link to="/" className="navbar-brand">
+            Home
+            </Link>
+            </li>
+            <li>
+            <Link to="/archives" className="navbar-brand">
+            Projects
+            </Link>
+            </li>
+            {register}
+        {loginOrOut}
+    </ul>
+        </div>
+        </nav>
+        <div className="container">
+            <div className="row">
+            {this.props.children}
+    </div>
+        </div>
+        </span>
+        )}
+
 }
 
 export default App;

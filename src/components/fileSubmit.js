@@ -41,7 +41,9 @@ class MyDropzone extends Component {
     render(){
         const files = this.state.files.map((file,i) =>{
                 return (
-            <li key = {file.id}>{file.preview}</li>
+                <li key = {file.id}>
+                {file.preview}
+                </li>
     )
     })
         return (

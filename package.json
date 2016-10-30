@@ -15,7 +15,8 @@
     "redux-form": "latest",
     "attr-accept": "latest",
     "react-dropzone": "latest",
-    "react-router": "latest"
+    "react-router": "latest",
+    "react-bootstrap": "latest"
   },
   "scripts": {
     "start": "react-scripts start",

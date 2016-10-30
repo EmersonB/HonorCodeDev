@@ -10,10 +10,25 @@ class Archives extends Component {
         this.submitProject = this.submitProject.bind(this)
         this.state = {
             name: '',
-            projects: []
+            projects: [],
+            loggedIn: (null !== firebase.auth().currentUser)
         }
     }
+    componentWillMount() {
+        firebase.auth().onAuthStateChanged(firebaseUser => {
 
+            this.setState({
+            loggedIn: (null !== firebaseUser)
+        })
+
+        if (firebaseUser) {
+            console.log("Logged IN", firebaseUser);
+        } else {
+            console.log('Not logged in');
+        }
+    });
+
+    }
     componentDidMount(){
         firebase.database().ref('projects/').on('value',(snapshot)=> {
 
@@ -43,6 +58,7 @@ class Archives extends Component {
         firebase.database().ref('projects/'+nextProject.id).set(nextProject)
     }
     render(){
+        console.log(this.state.projects.length)
         const currentProjects = this.state.projects.map((project,i) =>{
                 return (
             <div>
@@ -52,15 +68,37 @@ class Archives extends Component {
             </div>
     )
     })
-        return (
-            <div>
+        var viewable;
+        if (this.state.loggedIn) {
+            viewable = <div>
             <ul>
             {currentProjects}
             </ul>
             <input onChange={this.updateName} type="text" placeholder="New Project"/>
-            <br />
-            <button onClick={this.submitProject}> Create New Project </button>
-        </div>
+                <br />
+                <button bsStyle="primary" onClick={this.submitProject}> Create New Project </button>
+            </div>;
+
+
+        } else {
+            viewable = <div>
+                <h2 >
+                You must login or register to see projects.
+                </h2>
+                <div className="col-sm-6 col-sm-offset-3">
+                <Link to="/login" className="navbar-brand">
+                Login
+                </Link>
+                <Link to="/register" className="navbar-brand">
+                Register
+                </Link>
+                </div>
+                </div>;
+        }
+        return (
+            <div className="col-sm-6 col-sm-offset-3">
+                {viewable}
+            </div>
     )
 
     }
