@@ -10,7 +10,7 @@ class Home extends Component {
         return (
             <div>
             <div>
-                <Parallax bgImage="background1.jpg" strength={200}>
+                <Parallax bgImage="background4.jpg" strength={200}>
                 <div style={{
                     width: 800,
                     height: 300
@@ -71,7 +71,7 @@ class Home extends Component {
 
             </div>
                 <div>
-                <Parallax bgImage="background2.jpg" strength={200}>
+                <Parallax bgImage="background5.jpg" strength={200}>
                     <div style={{
                     width: 800,
                         height: 300
