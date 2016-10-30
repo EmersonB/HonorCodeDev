@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Dropzone from 'react-dropzone'
 import * as firebase from 'firebase'
+import {ListGroup, ListGroupItem, Button} from 'react-bootstrap';
 
 class MyDropzone extends Component {
     constructor(props,context) {
@@ -41,19 +42,22 @@ class MyDropzone extends Component {
     render(){
         const files = this.state.files.map((file,i) =>{
                 return (
-                <li key = {file.id}>
+                <ListGroupItem key = {file.id}>
                 {file.preview}
-                </li>
+                </ListGroupItem>
     )
     })
         return (
-            <div>
-            <ol>
+            <div className="panel panel-primary">
+            <div className="panel-heading"> Files </div>
+            <div className="panel-body">
+            <ListGroup>
             {files}
-            </ol>
+            </ListGroup>
             <Dropzone onDrop={this.onDrop}>
             <div>Try dropping some files here, or click to select files to upload.</div>
             </Dropzone>
+            </div>
             </div>
     );
     }

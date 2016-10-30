@@ -21,7 +21,7 @@ var Login = React.createClass({
             if (location.state && location.state.nextPathname) {
                 self.context.router.replace(location.state.nextPathname)
             } else {
-                self.context.router.replace('/')
+                self.context.router.replace('/home')
             }
             // User signed in!
             console.log('User signed in!');

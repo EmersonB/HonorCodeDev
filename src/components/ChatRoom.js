@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import * as firebase from 'firebase'
+import {ListGroup, ListGroupItem, Button,FormControl} from 'react-bootstrap';
 
 class ChatRoom extends Component {
     constructor(props, context){
@@ -40,11 +41,14 @@ class ChatRoom extends Component {
 
     submitMessage(event){
         console.log('submitMessage: '+this.state.message)
-        const nextMessage = {
-            id: this.state.messages.length,
-            text: this.state.message
+        if(this.state.message != "") {
+            const nextMessage = {
+                id: this.state.messages.length,
+                text: this.state.message
+            }
+            this.state.message = ""
+            firebase.database().ref('projects/' + this.props.name + '/messages/' + nextMessage.id).set(nextMessage)
         }
-        firebase.database().ref('projects/'+this.props.name+'/messages/'+nextMessage.id).set(nextMessage)
         // var list = Object.assign([], this.state.messages)
         // list.push(nextMessage)
         // this.setState({
@@ -55,17 +59,20 @@ class ChatRoom extends Component {
         console.log(this.props.name)
         const currentMessage = this.state.messages.map((message,i) =>{
             return (
-                <li key = {message.id}>{message.text}</li>
+                <ListGroupItem key = {message.id}>{message.text}</ListGroupItem>
             )
             })
         return (
-            <div>
-                <ol>
+            <div className="panel panel-primary">
+                <div className="panel-heading"> Messages </div>
+                <div className="panel-body">
+                <ListGroup>
                     {currentMessage}
-                </ol>
-                <input onChange={this.updateMessage} type="text" placeholder="Message"/>
+                </ListGroup>
+                <FormControl value={this.state.message} onChange={this.updateMessage} type="text" placeholder="Message"/>
                 <br />
-                <button onClick={this.submitMessage}> Submit Message </button>
+                <Button bsStyle="primary" onClick={this.submitMessage}> Submit Message </Button>
+            </div>
             </div>
         )
 

@@ -2,13 +2,17 @@ import React, { Component } from 'react';
 import * as firebase from 'firebase'
 import Project from './Project'
 import { Link,Router, Route, IndexRoute, hashHistory } from "react-router";
+import SearchBar from 'react-search-bar';
+import {ListGroup, ListGroupItem, Button, FormControl} from 'react-bootstrap';
 
 class Archives extends Component {
     constructor(props, context){
         super(props,context)
+        this.updateDescription = this.updateDescription.bind(this)
         this.updateName = this.updateName.bind(this)
         this.submitProject = this.submitProject.bind(this)
         this.state = {
+            description: '',
             name: '',
             projects: [],
             loggedIn: (null !== firebase.auth().currentUser)
@@ -49,34 +53,56 @@ class Archives extends Component {
             name:event.target.value
         })
     }
-
-    submitProject(event){
+    updateDescription(event){
+        console.log('updateDescription:'+event.target.value)
+        this.setState({
+            description:event.target.value
+        })
+    }
+    submitProject(event) {
+        if (this.state.name!= "") {
         const nextProject = {
             id: this.state.projects.length,
-            name: this.state.name
+            name: this.state.name,
+            description: this.state.description
         }
-        firebase.database().ref('projects/'+nextProject.id).set(nextProject)
+            this.state.name = ""
+            this.state.description = ""
+        firebase.database().ref('projects/' + nextProject.id).set(nextProject)
+    }
     }
     render(){
         console.log(this.state.projects.length)
         const currentProjects = this.state.projects.map((project,i) =>{
                 return (
             <div>
-            <li key = {project.id}>
-                <Link to={"/project/"+project.id}> {project.name} </Link>
-            </li>
+            <ListGroupItem header={project.name} key = {project.id}>
+                <Link to={"/project/"+project.id}>{project.description}</Link>
+            </ListGroupItem>
             </div>
     )
     })
+        var searchProjects;
         var viewable;
         if (this.state.loggedIn) {
             viewable = <div>
-            <ul>
+            <SearchBar className
+            onChange={(searchTerm, resolve) => {
+                console.log(searchTerm)
+
+                // get suggestions asynchronously based on `searchTerm`,
+                // then pass them to `resolve()` to populate suggestions
+            }}
+            onSearch={(searchTerm) => {
+
+            }} />
+            <br/>
+            <ListGroup>
             {currentProjects}
-            </ul>
-            <input onChange={this.updateName} type="text" placeholder="New Project"/>
-                <br />
-                <button bsStyle="primary" onClick={this.submitProject}> Create New Project </button>
+            </ListGroup>
+                <FormControl value={this.state.name} onChange={this.updateName} type="text" placeholder="Name"/>
+                <FormControl value={this.state.description} onChange={this.updateDescription} type="text" placeholder="Description"/>
+                <Button bsStyle="primary" onClick={this.submitProject}> Create New Project </Button>
             </div>;
 
 

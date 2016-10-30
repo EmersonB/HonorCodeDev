@@ -6,17 +6,20 @@
     "react-scripts": "0.6.1"
   },
   "dependencies": {
+    "attr-accept": "latest",
     "react": "^15.3.2",
+    "react-bootstrap": "latest",
     "react-dom": "^15.3.2",
+    "react-dropzone": "latest",
+    "react-parallax": "^1.0.4",
+    "react-redux": "latest",
+    "react-router": "latest",
     "reactfire": "latest",
     "redux": "latest",
-    "react-redux": "latest",
     "redux-devtools": "latest",
     "redux-form": "latest",
-    "attr-accept": "latest",
-    "react-dropzone": "latest",
-    "react-router": "latest",
-    "react-bootstrap": "latest"
+    "react-search-bar": "latest",
+    "firebase-tools": "latest"
   },
   "scripts": {
     "start": "react-scripts start",
