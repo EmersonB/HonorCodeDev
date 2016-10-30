@@ -79,13 +79,13 @@ class App extends Component {
         <nav className="navbar navbar-default navbar-static-top">
             <div className="container">
             <div className="navbar-header">
-            <Link to="/home" className="navbar-brand">
+            <Link to="/" className="navbar-brand">
             Honor Code
         </Link>
         </div>
         <ul className="nav navbar-nav pull-right">
             <li>
-            <Link to="/home" className="navbar-brand">
+            <Link to="/" className="navbar-brand">
             Home
             </Link>
             </li>

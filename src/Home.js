@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Link,Router, Route, IndexRoute, hashHistory } from "react-router";
 import { Parallax,Background } from 'react-parallax';
 import {Carousel,Grid,Row,PageHeader,Col,Clearfix,Glyphicon,Label,Button} from 'react-bootstrap';
-import App from './App';
 class Home extends Component {
 
     render(){
@@ -10,7 +9,6 @@ class Home extends Component {
         const foot = {color: '#428bca'};
         return (
             <div>
-                <App />
             <div>
                 <Parallax bgImage="background1.jpg" strength={200}>
                 <div style={{
