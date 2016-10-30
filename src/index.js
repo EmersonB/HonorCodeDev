@@ -11,7 +11,7 @@ ReactDOM.render(
     <Router history={hashHistory}>
         <Route path="/" component={App}>
             <Route path="archives" component={Archives}/>
-            <Route path="project(/:name)" name="project" component={Project}/>
+            <Route path="project/:name" name="project" component={Project}/>
         </Route>
 
     </Router>,

@@ -46,8 +46,9 @@ class Archives extends Component {
         const currentProjects = this.state.projects.map((project,i) =>{
                 return (
             <div>
-            <li key = {project.id}>{project.name}</li>
-            <Link to={"/project/"+project.id}> Archives </Link>
+            <li key = {project.id}>
+                <Link to={"/project/"+project.id}> {project.name} </Link>
+            </li>
             </div>
     )
     })

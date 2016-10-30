@@ -14,24 +14,17 @@ class Project extends Component {
         }
     }
     render(){
+        console.log(this.props.params.name)
         return(
-            //if({this.display}) {
             <div>
             {this.name}
-            <ChatRoom name={this.props.name}/>
+            <ChatRoom name={this.props.params.name}/>
             <br/>
-            <Notes name={this.props.name}/>
+            <Notes name={this.props.params.name}/>
             <br />
             Submit Files
-            <MyDropZone name={this.props.name}/>
+            <MyDropZone name={this.props.params.name}/>
             </div>
-            //}
-            //else
-            //{
-            //<div>
-            //{this.name}
-            //<div>
-            //}
     )
 
     }

@@ -52,6 +52,7 @@ class ChatRoom extends Component {
         // })
     }
     render(){
+        console.log(this.props.name)
         const currentMessage = this.state.messages.map((message,i) =>{
             return (
                 <li key = {message.id}>{message.text}</li>
