@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import * as firebase from 'firebase'
 import Project from './Project'
-import { Router, Route, IndexRoute, hashHistory } from "react-router";
+import { Link,Router, Route, IndexRoute, hashHistory } from "react-router";
 
 class Archives extends Component {
     constructor(props, context){
@@ -47,8 +47,8 @@ class Archives extends Component {
                 return (
             <div>
             <li key = {project.id}>{project.name}</li>
-        <Project name = {project.id}/>
-    </div>
+            <Link to={"/project/"+project.id}> Archives </Link>
+            </div>
     )
     })
         return (
