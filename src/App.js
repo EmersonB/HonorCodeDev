@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import * as firebase from 'firebase'
+import Archives from './components/Archives'
 import Project from './components/Project'
-import { Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 'react-router'
+import { DefaultRoute, RouteHandler, Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 'react-router'
 
 
 var config = {
@@ -14,66 +15,23 @@ var config = {
 };
 firebase.initializeApp(config);
 
+// let routes = (
+//     <Route name="app" path="/" handler={App}>
+//     <Route name="archives" path="/archives" handler={Archives}/>
+//     </Route>
+// );
+
 
 class App extends Component {
-    constructor(props, context){
-        super(props,context)
-        this.updateName = this.updateName.bind(this)
-        this.submitProject = this.submitProject.bind(this)
-            this.state = {
-                name: '',
-                projects: []
-            }
-    }
 
-    componentDidMount(){
-        firebase.database().ref('projects/').on('value',(snapshot)=> {
-
-            const currentProjects = snapshot.val()
-
-            if(currentProjects != null){
-            this.setState({
-                projects: currentProjects
-            })
-        }
-    }
-    )
-    }
-
-    updateName(event){
-        console.log('updateName:'+event.target.value)
-        this.setState({
-            name:event.target.value
-        })
-    }
-
-    submitProject(event){
-        const nextProject = {
-            id: this.state.projects.length,
-            name: this.state.name
-        }
-        firebase.database().ref('projects/'+nextProject.id).set(nextProject)
-    }
     render(){
-        const currentProjects = this.state.projects.map((project,i) =>{
-                return (
-                    <div>
-            <li key = {project.id}>{project.name}</li>
-            <Project name = {project.id}/>
+        return(
+            <div className = "nav">
+                <Link to="/app'"> Home </Link>
+                <Link to="/archives"> Archives </Link>
+                {this.props.children}
             </div>
-    )
-    })
-        return (
-            <div>
-            <ul>
-            {currentProjects}
-            </ul>
-            <input onChange={this.updateName} type="text" placeholder="New Project"/>
-            <br />
-            <button onClick={this.submitProject}> Create New Project </button>
-        </div>
-    )
-
+        )
     }
 }
 
