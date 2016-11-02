@@ -41,24 +41,24 @@ class Home extends Component {
             <div>
                 <Carousel>
                 <Carousel.Item>
-                <img width={900} height={500} alt="900x500" src="background3.jpg"/>
+                <img className="img-responsive center-block" width={500} height={500} alt="900x500" src="image1.jpg"/>
                     <Carousel.Caption>
-                    <h3>First slide label</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    <h3>Mobile Friendly</h3>
+                <p>For on the go studing.</p>
                 </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
-                <img width={900} height={500} alt="900x500" src="background2.jpg"/>
+                <img className="img-responsive center-block" width={990} height={500} alt="900x500" src="slideshow1.png"/>
                     <Carousel.Caption>
-                    <h3>Second slide label</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h3>File Upload</h3>
+                <p>Share your most important study guides or find others.</p>
                 </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
-                <img width={900} height={500} alt="900x500" src="background1.jpg"/>
+                <img className="img-responsive center-block" width={990} height={500} alt="900x500" src="slideshow2.png"/>
                     <Carousel.Caption>
-                    <h3>Third slide label</h3>
-                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                    <h3>Endless resources</h3>
+                <p>The studying never stops with our growing database of study guides.</p>
                 </Carousel.Caption>
                 </Carousel.Item>
                 </Carousel>
