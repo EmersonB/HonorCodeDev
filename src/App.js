@@ -4,7 +4,7 @@ import * as firebase from 'firebase'
 import Archives from './components/Archives'
 import Project from './components/Project'
 import { DefaultRoute, RouteHandler, Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 'react-router'
-import {Navbar} from 'react-bootstrap';
+import {Navbar,NavItem, Nav} from 'react-bootstrap';
 
 
 var config = {
@@ -50,47 +50,51 @@ class App extends Component {
         var register;
         var viewable;
         if (this.state.loggedIn) {
-            loginOrOut = <li>
+            loginOrOut = <NavItem>
             <Link to="/logout" className="navbar-brand">Logout</Link>
-                </li>;
+                </NavItem>;
             viewable =
             register = null
 
 
         } else {
-            loginOrOut = <li>
+            loginOrOut = <NavItem>
             <Link to="/login" className="navbar-brand">Login</Link>
-                </li>;
-            register = <li>
+                </NavItem>;
+            register = <NavItem>
             <Link to="/register" className="navbar-brand">
                 Register
                 </Link>
-                </li>;
+                </NavItem>;
         }
         return(
         <span>
-        <Navbar className="navbar navbar-default navbar-static-top">
-            <div className="container">
-            <div className="navbar-header">
-            <Link to="/" className="navbar-brand">
-            Honor Code
-        </Link>
-        </div>
-        <ul className="nav navbar-nav pull-right">
-            <li>
+        <Navbar>
+            <Nav>
+            <Navbar.Header>
+            <Navbar.Brand>
+                <NavItem>
+                    <Link to="/" className="navbar-brand">
+                        Honor Code
+                    </Link>
+                </NavItem>
+            </Navbar.Brand>
+            </Navbar.Header>
+            </Nav>
+            <Nav pullRight>
+            <NavItem>
             <Link to="/" className="navbar-brand">
             Home
             </Link>
-            </li>
-            <li>
+            </NavItem>
+            <NavItem>
             <Link to="/archives" className="navbar-brand">
             Projects
             </Link>
-            </li>
+            </NavItem>
             {register}
-        {loginOrOut}
-    </ul>
-        </div>
+            {loginOrOut}
+        </Nav>
         </Navbar>
         <div className="container">
             <div className="row">
