@@ -69,7 +69,7 @@ class App extends Component {
         }
         return(
         <span>
-        <Navbar>
+        <Navbar collapseOnSelect>
             <Nav>
             <Navbar.Header>
             <Navbar.Brand>
@@ -79,8 +79,10 @@ class App extends Component {
                     </Link>
                 </NavItem>
             </Navbar.Brand>
+            <Navbar.Toggle />
             </Navbar.Header>
             </Nav>
+            <Navbar.Collapse>
             <Nav pullRight>
             <NavItem>
             <Link to="/" className="navbar-brand">
@@ -95,6 +97,7 @@ class App extends Component {
             {register}
             {loginOrOut}
         </Nav>
+        </Navbar.Collapse>
         </Navbar>
         <div className="container">
             <div className="row">
