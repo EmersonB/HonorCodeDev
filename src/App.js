@@ -4,6 +4,7 @@ import * as firebase from 'firebase'
 import Archives from './components/Archives'
 import Project from './components/Project'
 import { DefaultRoute, RouteHandler, Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 'react-router'
+import {Navbar} from 'react-bootstrap';
 
 
 var config = {
@@ -68,7 +69,7 @@ class App extends Component {
         }
         return(
         <span>
-        <nav className="navbar navbar-default navbar-static-top">
+        <Navbar className="navbar navbar-default navbar-static-top">
             <div className="container">
             <div className="navbar-header">
             <Link to="/" className="navbar-brand">
@@ -90,7 +91,7 @@ class App extends Component {
         {loginOrOut}
     </ul>
         </div>
-        </nav>
+        </Navbar>
         <div className="container">
             <div className="row">
             {this.props.children}
