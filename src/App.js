@@ -50,18 +50,18 @@ class App extends Component {
         var register;
         var viewable;
         if (this.state.loggedIn) {
-            loginOrOut = <NavItem>
-            <Link to="/logout" className="navbar-brand">Logout</Link>
+            loginOrOut = <NavItem eventKey={3}>
+            <Link to="/logout" className="navbar-brand" >Logout</Link>
                 </NavItem>;
             viewable =
             register = null
 
 
         } else {
-            loginOrOut = <NavItem>
+            loginOrOut = <NavItem eventKey={4}>
             <Link to="/login" className="navbar-brand">Login</Link>
                 </NavItem>;
-            register = <NavItem>
+            register = <NavItem eventKey={3}>
             <Link to="/register" className="navbar-brand">
                 Register
                 </Link>
@@ -85,12 +85,12 @@ class App extends Component {
             <Navbar.Collapse>
             <Nav pullRight>
             <NavItem>
-            <Link to="/" className="navbar-brand">
+            <Link to="/" className="navbar-brand" eventKey={1}>
             Home
             </Link>
             </NavItem>
             <NavItem>
-            <Link to="/archives" className="navbar-brand">
+            <Link to="/archives" className="navbar-brand" eventKey={2}>
             Projects
             </Link>
             </NavItem>
