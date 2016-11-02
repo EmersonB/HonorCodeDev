@@ -13,7 +13,7 @@ var Logout = React.createClass({
     componentDidMount: function () {
         firebase.auth().signOut();
         this.setState({loggedIn: false});
-        // this.context.router.replace('/');
+        this.context.router.replace('/');
     },
     render: function () {
         return <p>You are now logged out</p>;

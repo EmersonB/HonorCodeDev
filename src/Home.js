@@ -63,11 +63,13 @@ class Home extends Component {
                 </Carousel.Item>
                 </Carousel>
             </div>
+            <br />
             <div classname ="text-center">
             <h1 className= "text-center">Contact Us</h1>
             <h4 className= "text-center"> We'll get back to you as soon as we can. Thank you!</h4>
             <h4 className= "text-center"> Email: <a href="mailto:eberlik@gmail.com">eberlik@gmail.com</a></h4>
-            <h4 className= "text-center"> Phone: <a>5713276988</a></h4>
+            <br />
+            <br/>
 
             </div>
                 <div>

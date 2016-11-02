@@ -22,7 +22,6 @@ class Project extends Component {
             <br/>
             <Notes name={this.props.params.name}/>
             <br />
-            Submit Files
             <MyDropZone name={this.props.params.name}/>
             </div>
     )
