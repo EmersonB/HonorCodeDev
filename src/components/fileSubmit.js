@@ -18,25 +18,32 @@ class MyDropzone extends Component {
     }
     componentDidMount(){
         var storageRef = firebase.storage().ref();
-        var tempUrls = []
-        console.log('componentDidMount')
+        var tempUrls = [];
+        //console.log('componentDidMount')
         firebase.database().ref('projects/'+this.props.name+'/files/').on('value',(snapshot)=> {
-
-            const currentFiles = snapshot.val()
-            console.log(currentFiles.length)
+            var tempUrls = [];
+            const currentFiles = snapshot.val();
+            //console.log("current files:" + currentFiles.length)
             if(currentFiles != null)
-        {
+            {
             this.setState({
-                files: currentFiles,
-            })
+                files: currentFiles
+            });
+                if(this.state.files.length == 0)
+                {
+                    location.reload();
+                    console.log("dead");
+                }
+                console.log("current files:" + currentFiles.length);
+                console.log("files:" + this.state.files.length);
             this.state.files.map((file,i) => {
                 var tempRef = storageRef.child(file);
             tempRef.getDownloadURL().then(function (url) {
                 tempUrls.push([file,url])
-                console.log(this.state)
+                //console.log(this.state)
                 //console.log(tempUrls)
                 this.setState({urls: tempUrls})
-                console.log(this.state.urls)
+                //console.log(this.state.urls)
                 // Insert url into an <img> tag to "download"
             }.bind(this)).catch(function (error) {
                 switch (error.code) {
@@ -66,20 +73,21 @@ class MyDropzone extends Component {
     }
 
     onDrop(files) {
-        console.log('Received files:',files)
+        //console.log('Received files:',files)
         var storageRef = firebase.storage().ref();
         for( var x = 0; x<files.length; x=x+1)
         {
-            console.log(files[x].name)
+            //console.log(files[x].name)
             const nextFile = {
                 id: this.state.files.length+x,
                 item: files[x].name
-            }
+            };
             firebase.database().ref('projects/'+this.props.name+'/files/' + nextFile.id).set(nextFile.item)
             var fileRef = storageRef.child(nextFile.item);
             fileRef.put(files[x]).then(function(snapshot) {
-                console.log('Uploaded a blob or file!');
+                //console.log('Uploaded a blob or file!');
             });
+            this.forceUpdate();
         }
 
 
@@ -87,17 +95,18 @@ class MyDropzone extends Component {
     render(){
         var storageRef = firebase.storage().ref();
 
-        console.log('-----'+this.state.files.length+'-----');
+        //console.log('-----'+this.state.files.length+'-----');
         //console.log(tempUrls);
 
         const files = this.state.urls.map((file,i) =>{
-            console.log('ELB'+file)
+            //console.log('ELB'+file)
                 return (
                 <ListGroupItem>
                     <a href={file[1]}> {file[0]} </a>
                 </ListGroupItem>
                 )
         })
+        console.log("Urls:" +this.state.urls.length);
 
         return (
             <div className="panel panel-primary">

@@ -59,7 +59,7 @@ class Archives extends Component {
         })
     }
     submitProject(event) {
-        if (this.state.name!= "") {
+        if (this.state.name!= "" && this.state.description != "") {
         const nextProject = {
             id: this.state.projects.length,
             name: this.state.name,
