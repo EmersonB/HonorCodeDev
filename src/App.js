@@ -47,64 +47,57 @@ class App extends Component {
     }
     render(){
         var loginOrOut;
+        var loginOrOutLi;
         var register;
-        var viewable;
+        var registerLi;
         if (this.state.loggedIn) {
-            loginOrOut = <NavItem eventKey={3}>
-            <Link to="/logout" className="navbar-brand" >Logout</Link>
-                </NavItem>;
-            viewable =
+            loginOrOut = <a>
+            <Link to="/logout" className="navbar-brand" className="scroll" >Logout</Link>
+                </a>;
             register = null
-
+            loginOrOutLi = <li><a><Link to="/logout" className="navbar-brand" className="scroll">Logout</Link> </a></li>;
+            registerLi = null
 
         } else {
-            loginOrOut = <NavItem eventKey={4}>
-            <Link to="/login" className="navbar-brand">Login</Link>
-                </NavItem>;
-            register = <NavItem eventKey={3}>
-            <Link to="/register" className="navbar-brand">
+            loginOrOut = <a>
+            <Link to="/login" className="navbar-brand" className="scroll">Login</Link> </a>;
+            register = <a>
+            <Link to="/register" className="navbar-brand" className="scroll">
                 Register
                 </Link>
-                </NavItem>;
+                </a>;
+            loginOrOutLi = <li><a className = "scroll" ><Link to="/login" className="navbar-brand" className="scroll">Login</Link> </a></li>;
+            registerLi = <li><a className = "scroll"> <Link to="/register" className="navbar-brand" className="scroll"> Register </Link> </a></li>;
         }
         return(
-        <span>
-        <Navbar collapseOnSelect>
-            <Nav>
-            <Navbar.Header>
-            <Navbar.Brand>
-                <NavItem>
-                    <Link to="/" className="navbar-brand">
-                        Honor Code
-                    </Link>
-                </NavItem>
-            </Navbar.Brand>
-            <Navbar.Toggle />
-            </Navbar.Header>
-            </Nav>
-            <Navbar.Collapse>
-            <Nav pullRight>
-            <NavItem>
-            <Link to="/" className="navbar-brand" eventKey={1}>
-            Home
-            </Link>
-            </NavItem>
-            <NavItem>
-            <Link to="/archives" className="navbar-brand" eventKey={2}>
-            Projects
-            </Link>
-            </NavItem>
-            {register}
-            {loginOrOut}
-        </Nav>
-        </Navbar.Collapse>
-        </Navbar>
+            <div>
+        <header>
         <div className="container">
             <div className="row">
-            {this.props.children}
-    </div>
+            <div className="col-xs-4 text-left navbar-nav signin">
+            {/*<a href="#pricing" className="scroll">Pricing</a>&nbsp; &nbsp;<a href="#">Sign in</a>*/}
+            <a> <Link to="/archives" className="navbar-brand" className="scroll"> Explore </Link> </a>&nbsp; &nbsp;
+            <a> <Link to="/" className="navbar-brand" className="scroll"> About Us </Link> </a>
+            </div>
+            <div className="col-xs-4 text-center logo">
+            <a href="/"><img src="img/logo.png" alt="Logo"/></a>
+            </div>
+            <div className="col-xs-4 text-right navbar-nav signin">
+            {/*<a href="#pricing" className="scroll">Pricing</a>&nbsp; &nbsp;<a href="#">Sign in</a>*/}
+            {loginOrOut}&nbsp; &nbsp;{register}
+            </div>
+            </div>
+
+
         </div>
-        </span>
+        </header>
+        <div className="container">
+
+            {this.props.children}
+
+        </div>
+        </div>
+
         )}
 
 }
