@@ -11,10 +11,25 @@
 /* ==========================================================================
    Global styles
    ========================================================================== */
+
 h1, h2, h3, h4, h5, h6, p, .btn, .navbar-nav a, .form-control, .list-inline, small, #pricing {
   font-family: 'Montserrat', sans-serif;
 }
-
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+.scrollMe {
+    height: 100vh;
+    overflow-y:scroll;
+    position:relative;
+    bottom:0;
+}
 p, .lead {
 	font-family: 'Raleway', sans-serif;
 }
@@ -140,12 +155,12 @@ a:hover, a:focus {
 }
 
 .btn-primary {
-  background-color:#3498DB;
-  color: #ffffff;
+  background-color:#FFFFFF;
+  color: #3498DB;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
-  background-color: #E74C3C;
+  background-color: #3498DB;
   color: #ffffff;
   -webkit-transition: all 0.35s ease-in-out;
   -moz-transition: all 0.35s ease-in-out;
@@ -210,6 +225,23 @@ a:hover, a:focus {
 
 
 /*-----------------Colors------------------*/
+
+.panel-primary {
+    background-color: #ffffff !important;
+    border-color: #2C3E50;
+    border-radius: 0;
+
+}
+
+.panel-heading{
+    background-color: #2C3E50 !important;
+    border-color: #2C3E50;
+    border-radius: 0;
+}
+
+.white2 {
+    color: #ECF0F1;
+}
 
 .black {
   color: #231f20;
@@ -609,6 +641,10 @@ footer {
     min-height: 25vh;
 }
 
+.scrolly {
+    min-height: 400px;
+    height: 400px;
+}
 
 
 

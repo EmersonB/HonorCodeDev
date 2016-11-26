@@ -7,6 +7,7 @@ class ChatRoom extends Component {
         super(props,context)
         this.updateMessage = this.updateMessage.bind(this)
         this.submitMessage = this.submitMessage.bind(this)
+        this.onEnter       = this.onEnter.bind(this)
         this.props = {
             name: ''
         },
@@ -30,6 +31,15 @@ class ChatRoom extends Component {
             }
             }
         )
+    }
+
+    onEnter(event){
+    if (event.nativeEvent.keyCode != 13) return;
+    event.preventDefault();
+    var input = event.target;
+    var text = input.value;
+
+    this.submitMessage(event);
     }
 
     updateMessage(event){
@@ -63,15 +73,17 @@ class ChatRoom extends Component {
             )
             })
         return (
+            <div className="container">
             <div className="panel panel-primary">
                 <div className="panel-heading"> Messages </div>
                 <div className="panel-body">
-                <ListGroup>
+                <ListGroup  className="pre-scrollable scrolly">
                     {currentMessage}
                 </ListGroup>
-                <FormControl value={this.state.message} onChange={this.updateMessage} type="text" placeholder="Message"/>
+                <FormControl value={this.state.message} onChange={this.updateMessage} type="text" placeholder="Message" onKeyPress={this.onEnter}/>
                 <br />
-                <Button bsStyle="primary" onClick={this.submitMessage}> Submit Message </Button>
+                <Button  bsStyle="primary" onClick={this.submitMessage}> Submit Message </Button>
+            </div>
             </div>
             </div>
         )

@@ -11,7 +11,7 @@
     "react-bootstrap": "latest",
     "react-dom": "^15.3.2",
     "react-dropzone": "latest",
-    "react-parallax": "^1.0.4",
+    "react-scroll": "latest",
     "react-redux": "latest",
     "react-router": "latest",
     "reactfire": "latest",
