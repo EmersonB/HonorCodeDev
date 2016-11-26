@@ -4,7 +4,6 @@ import * as firebase from 'firebase'
 import Archives from './components/Archives'
 import Project from './components/Project'
 import { DefaultRoute, RouteHandler, Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 'react-router'
-import {Navbar,NavItem, Nav} from 'react-bootstrap';
 
 
 var config = {
@@ -89,9 +88,10 @@ class App extends Component {
             </div>
 
 
+
         </div>
         </header>
-        <div className="container">
+        <div>
 
             {this.props.children}
 

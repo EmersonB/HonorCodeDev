@@ -17,9 +17,7 @@ ReactDOM.render(
             <IndexRoute component={Home} />
             <Route path="archives" component={Archives}/>
             <Route path="project/:name" name="project" component={Project}/>
-            <Route path="login" component={Login}/>
             <Route path="logout" component={Logout}/>
-            <Route path="register" component={Register}/>
         </Route>
         <Route path="/home" component={Home}/>
 

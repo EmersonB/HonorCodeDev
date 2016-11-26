@@ -20,18 +20,25 @@ p, .lead {
 }
 
 h1 {
-  font-size: 55px;
+  font-size: 75px;
   line-height: 55px;
   letter-spacing: -1px;
-  color: #ffffff;
+  color: #E74C3C;
   font-weight: 700;
+}
+.h21 {
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -0.5px;
+    color: #FFFFFF;
+    font-weight: 700;
 }
 
 h2 {
   font-size: 40px;
   line-height: 40px;
   etter-spacing: -0.5px;
-  color: #ffffff;
+  color: #2C3E50;
   font-weight: 700;
 }
 
@@ -48,6 +55,12 @@ h3 {
   line-height: 26px;
   color: #ffffff;
   font-weight: 400;
+}
+.lead2 {
+    font-size: 21px;
+    line-height: 26px;
+    color: #000000;
+    font-weight: 200;
 }
 
 p {
@@ -98,7 +111,7 @@ a:hover, a:focus {
 
 .btn {
   text-transform: uppercase;
-  border-radius: 4px;
+  border-radius: 0px;
   border: none;
 }
 
@@ -142,12 +155,12 @@ a:hover, a:focus {
 
 .btn-secondary {
   background-color: #ffffff;
-  color: #3498DB;
+  color: #E74C3C;
 }
 
 .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary.active {
-  background-color: #ededed;
-  color: #3498DB;
+  background-color: #E74C3C;
+  color: #ffffff;
   -webkit-transition: all 0.35s ease-in-out;
   -moz-transition: all 0.35s ease-in-out;
   -o-transition: all 0.35s ease-in-out;
@@ -292,6 +305,17 @@ header {
   -moz-background-size: cover;
   -o-background-size: cover;
 }
+.header2 {
+    background: url(../img/arcticback.jpg) no-repeat center center;
+    width: 100%;
+    padding: 20vh 10px 60px 10px;
+    height: 75vh;
+    overflow: hidden;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
 
 .header-info {
   position: absolute;
@@ -372,7 +396,8 @@ header {
 
 
 #be-the-first {
-  background: url(../img/be-the-first-bg.jpg) #231f20 no-repeat center center fixed;
+  background: #231f20 no-repeat center center fixed;
+    background-color: #2980B9;
   min-height: 300px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -385,14 +410,24 @@ hr.line {
 	border: 2px solid;
 }
 
+.red {
+    border-color: #E74C3C;
+    color: #E74C3C;
+}
+
 .purple {
 	border-color: #6d3f96;
 	color: #6d3f96;
 }
 
 .blue {
-	border-color: #70cbce;
-	color: #70cbce
+	border-color: #2C3E50;
+	color: #2C3E50;
+}
+
+.blue2 {
+    border-color: #2980B9;
+    color: #2980B9;
 }
 
 .yellow {
@@ -567,6 +602,13 @@ footer {
     border-radius: 0;
 }
 
+.top-projects-container {
+    width: 80%;
+    padding: 100px 10px 60px 10px;
+    height: 75vh;
+    min-height: 25vh;
+}
+
 
 
 
@@ -606,7 +648,9 @@ footer {
     opacity: 1;
 }
 
-
+ul {
+   list-style:none;
+}
 
 
 /* ==========================================================================
