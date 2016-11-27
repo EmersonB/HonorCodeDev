@@ -41,8 +41,8 @@
       <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="89" column="80" selection-start-line="89" selection-start-column="80" selection-end-line="89" selection-end-column="80" />
+            <state relative-caret-position="90">
+              <caret line="28" column="61" selection-start-line="28" selection-start-column="61" selection-end-line="28" selection-end-column="61" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -420,7 +420,7 @@
       <workItem from="1479663080662" duration="2653000" />
       <workItem from="1479667651407" duration="6367000" />
       <workItem from="1479675143471" duration="52000" />
-      <workItem from="1479915876807" duration="60937000" />
+      <workItem from="1479915876807" duration="61656000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1476300652820</created>
@@ -667,11 +667,18 @@
       <option name="project" value="LOCAL" />
       <updated>1480265950075</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="changed home page for mobile">
+      <created>1480266109420</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1480266109420</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="174705000" />
+    <option name="totallyTimeSpent" value="175424000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1130,8 +1137,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="89" column="80" selection-start-line="89" selection-start-column="80" selection-end-line="89" selection-end-column="80" />
+        <state relative-caret-position="90">
+          <caret line="28" column="61" selection-start-line="28" selection-start-column="61" selection-end-line="28" selection-end-column="61" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>

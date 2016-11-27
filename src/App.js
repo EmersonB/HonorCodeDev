@@ -26,7 +26,8 @@ class App extends Component {
     constructor(props, context){
         super(props,context)
         this.state = {
-            loggedIn: (null !== firebase.auth().currentUser)
+            loggedIn: (null !== firebase.auth().currentUser),
+            userName: null
         }
     }
         componentWillMount() {
@@ -38,6 +39,11 @@ class App extends Component {
 
         if (firebaseUser) {
             console.log("Logged IN", firebaseUser);
+            var user = firebase.auth().currentUser;
+            this.setState({
+                loggedIn: (null !== firebaseUser),
+                userName:  user.displayName
+            })
         } else {
             console.log('Not logged in');
         }
@@ -51,9 +57,10 @@ class App extends Component {
         var registerLi;
         var userName;
         if (this.state.loggedIn) {
-            var user = firebase.auth().currentUser;
-            console.log(user);
-            userName = <a> Hello {user.displayName} </a>;
+            if(this.state.userName !=null)
+                userName = <a> Hello {this.state.userName} </a>;
+            else
+                userName=null
             loginOrOut = <a>
             <Link to="/logout" className="navbar-brand" className="scroll" >Logout</Link>
                 </a>;
