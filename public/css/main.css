@@ -680,6 +680,12 @@ footer {
     overflow-x: hidden;
 }
 
+.scrolly2 {
+    min-height: 0px;
+    max-height: 1000px;
+    overflow-y: scroll;
+}
+
 
 /* ==========================================================================
    Form styles

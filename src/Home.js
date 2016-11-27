@@ -75,12 +75,12 @@ class Home extends Component {
             <div className="col-sm-6 wow fadeIn" data-wow-delay="0.4s">
             <hr className="line blue2"/>
             <h3>Personal (free)</h3>
-        <p> Create up to 10 projects for the world to see and have free access to our massive database of user-made study guides.<br/><br/></p><a className="btn btn-primary btn-lg scroll "><Link to="/purchase"> Get Started </Link></a>
+        <p> Create up to 10 projects for the world to see and have free access to our massive database of user-made study guides.<br/><br/></p><a className="btn btn-primary btn-lg scroll "><Link to="/register"> Get Started </Link></a>
         </div>
         <div className="col-sm-6 wow fadeIn" data-wow-delay="0.8s">
             <hr  className="line red"/>
             <h3>Student ($5/month)</h3>
-        <p>Don't want to stop your studying? Create unlimited projects, private or public, depending on how confidential your material is. Access to our study guide database is included.</p><a className="btn btn-secondary btn-lg scroll "><Link to="/purchase"> Get Started </Link></a>
+        <p>Don't want to stop your studying? Create unlimited projects, private or public, depending on how confidential your material is. Access to our study guide database is included.</p><a className="btn btn-secondary btn-lg scroll "><Link to="/register"> Get Started </Link></a>
         </div>
         </div>
         </div>

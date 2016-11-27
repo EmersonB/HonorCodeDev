@@ -10,10 +10,12 @@ class Archives extends Component {
         this.updateDescription = this.updateDescription.bind(this)
         this.updateName = this.updateName.bind(this)
         this.submitProject = this.submitProject.bind(this)
+        this.searchForProjects = this.searchForProjects.bind(this)
         this.state = {
             description: '',
             name: '',
             projects: [],
+            searched: [],
             loggedIn: (null !== firebase.auth().currentUser)
         }
     }
@@ -39,7 +41,8 @@ class Archives extends Component {
 
             if(currentProjects != null){
             this.setState({
-                projects: currentProjects
+                projects: currentProjects.slice(),
+                searched: currentProjects
             })
         }
     }
@@ -58,6 +61,21 @@ class Archives extends Component {
             description:event.target.value
         })
     }
+    searchForProjects(event){
+
+         console.log(this.state.searched)
+         var searchTemp = this.state.projects.slice()
+        for(var count = 0; count<this.state.searched.length; count++){
+            if(searchTemp[count]!=null && searchTemp[count].name.toLowerCase().indexOf(event.target.value)==-1){
+                console.log(searchTemp[count].name)
+                searchTemp[count] = null
+            }
+        }
+        this.setState({
+           searched:searchTemp
+        })
+        console.log(this.state.searched)
+    }
     submitProject(event) {
         var user = firebase.auth().currentUser;
         var userName = user.displayName;
@@ -74,8 +92,9 @@ class Archives extends Component {
     }
     }
     render(){
-        console.log(this.state.projects.length)
-        const currentProjects = this.state.projects.map((project,i) =>{
+        //console.log(this.state.searched)
+        var currentProjects = this.state.searched.map((project,i) =>{
+                if(project!=null){
                 var head = <h3>{project.name} <Link to={"/project/"+project.id}><i className="fa fa-hand-o-right" aria-hidden="true"></i></Link></h3>
                 return (
             <div>
@@ -83,14 +102,16 @@ class Archives extends Component {
             Created By: {project.createdBy}
             </ListGroupItem>
             </div>
-    )
+    )}
     })
         var searchProjects;
         var viewable;
         if (this.state.loggedIn) {
             viewable = <div>
             <br/>
-            <ListGroup>
+            <FormControl onChange={this.searchForProjects} type="text" placeholder="Search projects"/>
+                    <br/>
+            <ListGroup className ="scrolly2">
             {currentProjects}
             </ListGroup>
                 <FormControl value={this.state.name} onChange={this.updateName} type="text" placeholder="Name"/>
