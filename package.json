@@ -18,8 +18,7 @@
     "redux-devtools": "latest",
     "redux-form": "latest",
     "react-search-bar": "latest",
-    "firebase-tools": "latest",
-    "jquery": "latest"
+    "firebase-tools": "latest"
   },
   "scripts": {
     "start": "react-scripts start",
