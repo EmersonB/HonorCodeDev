@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import * as firebase from 'firebase'
 import {ListGroup, ListGroupItem, Button,FormControl} from 'react-bootstrap';
+import $ from 'jquery';
 
 class ChatRoom extends Component {
     constructor(props, context){
@@ -49,12 +50,20 @@ class ChatRoom extends Component {
         })
     }
 
+    componentDidUpdate() {
+        const messageList = this.refs.messageList;
+        messageList.scrollTop = messageList.scrollHeight;
+    }
+
     submitMessage(event){
+        var user = firebase.auth().currentUser;
+        var userName = user.displayName;
         console.log('submitMessage: '+this.state.message)
-        if(this.state.message != "") {
+        if(this.state.message.trim() != "") {
             const nextMessage = {
                 id: this.state.messages.length,
-                text: this.state.message
+                text: this.state.message,
+                user: userName
             }
             this.state.message = ""
             firebase.database().ref('projects/' + this.props.name + '/messages/' + nextMessage.id).set(nextMessage)
@@ -69,20 +78,20 @@ class ChatRoom extends Component {
         console.log(this.props.name)
         const currentMessage = this.state.messages.map((message,i) =>{
             return (
-                <ListGroupItem key = {message.id}>{message.text}</ListGroupItem>
+                <ListGroupItem key = {message.id}><a className="blue2">{message.user}</a>: {message.text}</ListGroupItem>
             )
             })
         return (
             <div className="container">
-            <div className="panel panel-primary">
+            <div className="panel panel-primary wow animated fadeInLeft">
                 <div className="panel-heading"> Messages </div>
                 <div className="panel-body">
-                <ListGroup  className="pre-scrollable scrolly">
+                <div  className="pre-scrollable scrolly" ref="messageList">
                     {currentMessage}
-                </ListGroup>
+                </div>
                 <FormControl value={this.state.message} onChange={this.updateMessage} type="text" placeholder="Message" onKeyPress={this.onEnter}/>
                 <br />
-                <Button  bsStyle="primary" onClick={this.submitMessage}> Submit Message </Button>
+                <Button  bsStyle="primary" onClick={this.submitMessage}> Send <span className="blue2 light fa fa-paper-plane-o"></span></Button>
             </div>
             </div>
             </div>

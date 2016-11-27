@@ -59,11 +59,14 @@ class Archives extends Component {
         })
     }
     submitProject(event) {
+        var user = firebase.auth().currentUser;
+        var userName = user.displayName;
         if (this.state.name!= "" && this.state.description != "") {
         const nextProject = {
             id: this.state.projects.length,
             name: this.state.name,
-            description: this.state.description
+            description: this.state.description,
+            createdBy: userName
         }
             this.state.name = ""
             this.state.description = ""
@@ -73,10 +76,11 @@ class Archives extends Component {
     render(){
         console.log(this.state.projects.length)
         const currentProjects = this.state.projects.map((project,i) =>{
+                var head = <h3>{project.name} <Link to={"/project/"+project.id}><i className="fa fa-hand-o-right" aria-hidden="true"></i></Link></h3>
                 return (
             <div>
-            <ListGroupItem header={project.name} key = {project.id}>
-                <Link to={"/project/"+project.id}>{project.description}</Link>
+            <ListGroupItem header={head} key = {project.id}>
+            Created By: {project.createdBy}
             </ListGroupItem>
             </div>
     )
@@ -97,21 +101,27 @@ class Archives extends Component {
 
         } else {
             viewable = <div>
-                <h2 >
-                You must login or register to see projects.
-                </h2>
-                <div className="col-sm-6 col-sm-offset-3">
-                <Link to="/login" className="navbar-brand">
-                Login
+                <h3 className="wow fadeInLeft lead2">
+                Please login or signup to see projects.
+                </h3>
+                <div className="col-xs-6 wow fadeInLeft lead2" data-wow-delay="0.4s">
+                <a className="btn btn-secondary btn-lg" >
+                <Link to="/login" className="">
+                >Login <span className="white light fa fa-hand-o-right"> </span>
                 </Link>
-                <Link to="/register" className="navbar-brand">
-                Register
+                </a>
+                <a className="btn btn-secondary btn-lg" >
+                <Link to="/register" className="">
+                >Register <span className="white light fa fa-hand-o-right"> </span>
                 </Link>
+                </a>
                 </div>
                 </div>;
         }
         return (
             <div className="col-sm-6 col-sm-offset-3">
+                <h1> Explore </h1>
+                <h2> See all the community created study guides in one place.</h2>
                 {viewable}
             </div>
     )

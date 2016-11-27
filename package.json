@@ -11,7 +11,6 @@
     "react-bootstrap": "latest",
     "react-dom": "^15.3.2",
     "react-dropzone": "latest",
-    "react-scroll": "latest",
     "react-redux": "latest",
     "react-router": "latest",
     "reactfire": "latest",
@@ -19,7 +18,8 @@
     "redux-devtools": "latest",
     "redux-form": "latest",
     "react-search-bar": "latest",
-    "firebase-tools": "latest"
+    "firebase-tools": "latest",
+    "jquery": "latest"
   },
   "scripts": {
     "start": "react-scripts start",

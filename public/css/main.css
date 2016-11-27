@@ -130,6 +130,14 @@ a:hover, a:focus {
   border: none;
 }
 
+.btn-login{
+    text-transform: uppercase;
+    border-radius: 4px;
+    width: 60%;
+    border: none;
+    height: 36px;
+}
+
 .btn-lg {
   font-size: 13px;
   line-height: 1.33;
@@ -158,6 +166,11 @@ a:hover, a:focus {
   background-color:#FFFFFF;
   color: #3498DB;
 }
+.btn-primary-inverse {
+    background-color:#3498DB;
+    color: #FFFFFF;
+    border-radius: 4px;
+}
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
   background-color: #3498DB;
@@ -166,6 +179,17 @@ a:hover, a:focus {
   -moz-transition: all 0.35s ease-in-out;
   -o-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
+}
+
+.btn-primary-inverse:hover, .btn-primary-inverse:focus, .btn-primary-inverse:active, .btn-primary-inverse.active{
+    background-color: #FFFFFF;
+    color: #3498DB;
+    -webkit-transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+
+}
 }
 
 .btn-secondary {
@@ -437,6 +461,15 @@ header {
   background-size: cover;
 }
 
+#loginUI {
+    background: url(../img/bg2.jpg) #2980B9 no-repeat center center fixed;
+    min-height: 300px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 hr.line {
 	width: 100%;
 	border: 2px solid;
@@ -642,8 +675,9 @@ footer {
 }
 
 .scrolly {
-    min-height: 400px;
+    min-height: 300px;
     height: 400px;
+    overflow-x: hidden;
 }
 
 
@@ -656,14 +690,14 @@ footer {
     background-image: none;
     border: 0px solid transparent;
     border-radius: 4px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
     color: #929496;
     display: block;
-    font-size: 15px;
-    height: 60px;
+    font-size: 12px;
+    height: 36px;
     line-height: 1.42857;
     padding: 6px 12px;
     transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    width: 100%;
 }
 
 .form-control::-moz-placeholder {
@@ -688,6 +722,53 @@ ul {
    list-style:none;
 }
 
+/* ==========================================================================
+   FormGroup
+   ========================================================================== */
+form .form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+form .input-icon {
+    position: absolute;
+    top: 50%;
+    margin-top: -9px;
+    left: 12px;
+    width: 18px;
+    height: 18px;
+}
+.main-login{
+    background-color: #fff;
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 4px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+
+}
+
+.main-center{
+    margin-top: 30px;
+    margin: 0 auto;
+    max-width: 400px;
+    padding: 40px 40px;
+
+}
+
+.login-button{
+    margin-top: 5px;
+}
+
+.login-register{
+    font-size: 11px;
+    text-align: center;
+}
+
+
+
 
 /* ==========================================================================
    Mobile styles
@@ -701,7 +782,6 @@ ul {
   padding: 16px 13px;
   letter-spacing: 0px;
 }
-
 
 .btn-wide {
   width: 100%;

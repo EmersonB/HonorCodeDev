@@ -11,13 +11,34 @@ class Project extends Component {
         super(props,context)
         this.props = {
             name: ''
+        },
+        this.state = {
+            projects: [],
+            project: ''
         }
     }
+    componentDidMount(){
+        firebase.database().ref('projects/').on('value',(snapshot)=> {
+
+            const currentProjects = snapshot.val()
+
+            if(currentProjects != null){
+            this.setState({
+                projects: currentProjects,
+                project: currentProjects[parseInt(this.props.params.name)]
+            })
+        }
+    })}
+
     render(){
-        console.log(this.props.params.name)
+
         return(
             <div>
-            {this.name}
+            <div className="container">
+            <h3 className > Project Name: </h3><h5>{this.state.project.name}</h5>
+            <h3> Description: </h3><h5>{this.state.project.description}</h5>
+            <h3></h3>
+            </div>
             <ChatRoom name={this.props.params.name}/>
             <br/>
             <Notes name={this.props.params.name}/>

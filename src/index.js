@@ -19,7 +19,8 @@ ReactDOM.render(
             <Route path="project/:name" name="project" component={Project}/>
             <Route path="logout" component={Logout}/>
         </Route>
-        <Route path="/home" component={Home}/>
+        <Route path="/login" component={Login}/>
+        <Route path="/register" component={Register}/>
 
     </Router>,
   document.getElementById('root')

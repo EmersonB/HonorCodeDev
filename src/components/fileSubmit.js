@@ -73,6 +73,8 @@ class MyDropzone extends Component {
     }
 
     onDrop(files) {
+        var user = firebase.auth().currentUser;
+        var userName = user.displayName;
         //console.log('Received files:',files)
         var storageRef = firebase.storage().ref();
         for( var x = 0; x<files.length; x=x+1)
@@ -80,7 +82,8 @@ class MyDropzone extends Component {
             //console.log(files[x].name)
             const nextFile = {
                 id: this.state.files.length+x,
-                item: files[x].name
+                item: files[x].name,
+                user: userName
             };
             firebase.database().ref('projects/'+this.props.name+'/files/' + nextFile.id).set(nextFile.item)
             var fileRef = storageRef.child(nextFile.item);
@@ -102,24 +105,26 @@ class MyDropzone extends Component {
             //console.log('ELB'+file)
                 return (
                 <ListGroupItem>
-                    <a href={file[1]}> {file[0]} </a>
+                {file[2]}<a href={file[1]}> {file[0]} </a>
                 </ListGroupItem>
                 )
         })
         console.log("Urls:" +this.state.urls.length);
 
         return (
-            <div className="panel panel-primary">
+            <div className="container">
+            <div className="panel panel-primary wow animated fadeInLeft">
             <div className="panel-heading"> Files </div>
             <div className="panel-body">
-            <ListGroup>
+            <div className="pre-scrollable scrolly" ref="fileList">
             {files}
-            </ListGroup>
+            </div>
             <Dropzone onDrop={this.onDrop}>
             <div>
             <Label>Drop or click to upload files.</Label>
             </div>
             </Dropzone>
+            </div>
             </div>
             </div>
     );
