@@ -4,7 +4,6 @@
     <list default="true" id="16238787-0cb9-4ff9-a3e2-65e1a7893428" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Home.js" afterPath="$PROJECT_DIR$/src/Home.js" />
     </list>
     <ignored path="firebase-react-starter.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="90" column="35" selection-start-line="90" selection-start-column="35" selection-end-line="90" selection-end-column="35" />
+            <state relative-caret-position="359">
+              <caret line="89" column="80" selection-start-line="89" selection-start-column="80" selection-end-line="89" selection-end-column="80" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -95,11 +94,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Home.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Home.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="51" column="22" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
+            <state relative-caret-position="-178">
+              <caret line="52" column="14" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -144,8 +143,8 @@
         <option value="$PROJECT_DIR$/src/components/Notes.js" />
         <option value="$PROJECT_DIR$/src/components/Project.js" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/Home.js" />
+        <option value="$PROJECT_DIR$/src/App.js" />
       </list>
     </option>
   </component>
@@ -421,7 +420,7 @@
       <workItem from="1479663080662" duration="2653000" />
       <workItem from="1479667651407" duration="6367000" />
       <workItem from="1479675143471" duration="52000" />
-      <workItem from="1479915876807" duration="60770000" />
+      <workItem from="1479915876807" duration="60937000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1476300652820</created>
@@ -661,11 +660,18 @@
       <option name="project" value="LOCAL" />
       <updated>1480230743127</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="changed home page for mobile">
+      <created>1480265950075</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1480265950075</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="174538000" />
+    <option name="totallyTimeSpent" value="174705000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -757,7 +763,8 @@
     <MESSAGE value="changed look of messages and added on enter" />
     <MESSAGE value="added lots of stuff:&#10;login &#10;registration&#10;fixed ui" />
     <MESSAGE value="none" />
-    <option name="LAST_COMMIT_MESSAGE" value="none" />
+    <MESSAGE value="changed home page for mobile" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed home page for mobile" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1111,22 +1118,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
+    <entry file="file://$PROJECT_DIR$/src/Home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="90" column="35" selection-start-line="90" selection-start-column="35" selection-end-line="90" selection-end-column="35" />
+        <state relative-caret-position="-178">
+          <caret line="52" column="14" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Home.js">
+    <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="51" column="22" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
+        <state relative-caret-position="359">
+          <caret line="89" column="80" selection-start-line="89" selection-start-column="80" selection-end-line="89" selection-end-column="80" />
           <folding>
-            <element signature="e#0#40#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
