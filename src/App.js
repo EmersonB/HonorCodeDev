@@ -93,7 +93,7 @@ class App extends Component {
             <div className="col-xs-4 text-center logo">
             <a href="/"><img src="img/logo.png" alt="Logo"/></a>
             </div>
-            <div className="col-xs-4 text-right navbar-nav signin text-right">
+            <div className="col-xs-4 text-right navbar-nav signin rightText">
             {/*<a href="#pricing" className="scroll">Pricing</a>&nbsp; &nbsp;<a href="#">Sign in</a>*/}
             {userName}&nbsp; &nbsp;{loginOrOut}&nbsp; &nbsp;{register}
             </div>

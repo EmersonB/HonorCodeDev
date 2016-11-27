@@ -679,7 +679,9 @@ footer {
     height: 400px;
     overflow-x: hidden;
 }
-
+.rightText{
+    direction: rtl;
+}
 
 
 /* ==========================================================================
