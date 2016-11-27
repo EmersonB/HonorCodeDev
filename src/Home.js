@@ -28,27 +28,32 @@ class Home extends Component {
         </div>
         </div>
         </div>
-            <div className="top-projects-container col-sm-offset-1 text-center">
+
+            <section id="main-info" className="pad-xl">
+            <div className="container">
             <div className="row">
-            <div className="col-xs-6 wow fadeInLeft lead2" data-wow-delay="0.4s">
-                <ul className="text-left">
+            <div className="col-sm-6 wow fadeIn" data-wow-delay="0.4s">
+            <hr className="line blue"/>
+            <h3>Features</h3>
+            <ul>
                 <li>Tools:</li>
                 <li> real-time chat </li>
                 <li> quick notes </li>
                 <li> file storage </li>
                 <li> practice questions </li>
-                <li> <br/></li>
-                <li> Features: </li>
                 <li> private study guides </li>
                 <li> Large database of complete study materials </li>
-
-                </ul>
+            </ul>
+        <hr className="line blue"/>
+        </div>
+        <div className="col-sm-6 wow fadeIn" data-wow-delay="0.8s">
+            <div className="iphone wow fadeInUp" data-wow-delay="1s">
+            <img src="img/macbook.png"/>
                 </div>
-            <div className=" wow fadeInRight col-xs-6" data-wow-delay="0.4s">
-                <img className="col-md-10" src="img/macbook.png"/>
-                </div>
-            </div>
-                </div>
+        </div>
+        </div>
+        </div>
+        </section>
         <section id="be-the-first" className="pad-xl">
             <div className="container">
             <div className="row">

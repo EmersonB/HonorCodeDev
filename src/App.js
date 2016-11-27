@@ -49,7 +49,11 @@ class App extends Component {
         var loginOrOutLi;
         var register;
         var registerLi;
+        var userName;
         if (this.state.loggedIn) {
+            var user = firebase.auth().currentUser;
+            console.log(user);
+            userName = <a> Hello {user.displayName} </a>;
             loginOrOut = <a>
             <Link to="/logout" className="navbar-brand" className="scroll" >Logout</Link>
                 </a>;
@@ -65,6 +69,7 @@ class App extends Component {
                 Register
                 </Link>
                 </a>;
+            userName = null
             loginOrOutLi = <li><a className = "scroll" ><Link to="/login" className="navbar-brand" className="scroll">Login</Link> </a></li>;
             registerLi = <li><a className = "scroll"> <Link to="/register" className="navbar-brand" className="scroll"> Register </Link> </a></li>;
         }
@@ -83,7 +88,7 @@ class App extends Component {
             </div>
             <div className="col-xs-4 text-right navbar-nav signin">
             {/*<a href="#pricing" className="scroll">Pricing</a>&nbsp; &nbsp;<a href="#">Sign in</a>*/}
-            {loginOrOut}&nbsp; &nbsp;{register}
+            {userName}&nbsp; &nbsp;{loginOrOut}&nbsp; &nbsp;{register}
             </div>
             </div>
 
