@@ -363,7 +363,7 @@
       <workItem from="1480295187649" duration="266000" />
       <workItem from="1480297523212" duration="4859000" />
       <workItem from="1480306990389" duration="937000" />
-      <workItem from="1480309466179" duration="784000" />
+      <workItem from="1480309466179" duration="798000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1476300652820</created>
@@ -666,11 +666,18 @@
       <option name="project" value="LOCAL" />
       <updated>1480304273287</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="changed to react app">
+      <created>1480310274891</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1480310274891</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="192201000" />
+    <option name="totallyTimeSpent" value="192215000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -740,7 +747,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="finished home page and bootstrap stuff." />
     <MESSAGE value="removed search bar" />
     <MESSAGE value="added images" />
     <MESSAGE value="added new icon of book" />
@@ -765,7 +771,8 @@
     <MESSAGE value="refined for release" />
     <MESSAGE value="logo" />
     <MESSAGE value="nothing hopefully" />
-    <option name="LAST_COMMIT_MESSAGE" value="nothing hopefully" />
+    <MESSAGE value="changed to react app" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed to react app" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
