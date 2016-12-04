@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { Link,Router, Route, IndexRoute, hashHistory } from "react-router";
+import ReactTypewrite from 'react-typewrite';
+
 class Home extends Component {
 
     render(){
@@ -19,7 +21,7 @@ class Home extends Component {
             <div className="col-md-8  text-left">
             <div className="row text-left">
             <div className="col-xs-8 text-left wow animated fadeInUp" data-wow-delay="1s">
-            <a className="btn btn-secondary btn-lg scroll "><Link to="/archives"> View Projects </Link></a>
+            <a className="btn btn-secondary-inverse btn-lg scroll "><Link to="/archives"> View Projects </Link></a>
         </div>
         </div>
         </div>
@@ -79,7 +81,7 @@ class Home extends Component {
         </div>
         <div className="col-sm-6 wow fadeIn" data-wow-delay="0.8s">
             <hr  className="line red"/>
-            <h3>Student ($5/month)</h3>
+            <h3>Student <strike>($5/month)</strike>(free)</h3>
         <p>Don't want to stop your studying? Create unlimited projects, private or public, depending on how confidential your material is. Access to our study guide database is included.</p><a className="btn btn-secondary btn-lg scroll "><Link to="/register"> Get Started </Link></a>
         </div>
         </div>

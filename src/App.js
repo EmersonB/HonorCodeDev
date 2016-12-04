@@ -58,51 +58,46 @@ class App extends Component {
         var userName;
         if (this.state.loggedIn) {
             if(this.state.userName !=null)
-                userName = <a> Hello {this.state.userName} </a>;
+                userName = <li><a> Hello {this.state.userName} </a></li>;
             else
                 userName=null
-            loginOrOut = <a>
+            loginOrOut = <li><a>
             <Link to="/logout" className="navbar-brand" className="scroll" >Logout</Link>
-                </a>;
+                </a></li>;
             register = null
             loginOrOutLi = <li><a><Link to="/logout" className="navbar-brand" className="scroll">Logout</Link> </a></li>;
             registerLi = null
 
         } else {
-            loginOrOut = <a>
-            <Link to="/login" className="navbar-brand" className="scroll">Login</Link> </a>;
-            register = <a>
+            loginOrOut = <li><a>
+            <Link to="/login" className="navbar-brand" className="scroll">Login</Link> </a></li>;
+            register = <li><a>
             <Link to="/register" className="navbar-brand" className="scroll">
                 Register
                 </Link>
-                </a>;
+                </a></li>;
             userName = null
             loginOrOutLi = <li><a className = "scroll" ><Link to="/login" className="navbar-brand" className="scroll">Login</Link> </a></li>;
             registerLi = <li><a className = "scroll"> <Link to="/register" className="navbar-brand" className="scroll"> Register </Link> </a></li>;
         }
         return(
             <div>
+
+
         <header>
-        <div className="container">
-            <div className="row">
-            <div className="col-xs-4 text-left navbar-nav signin">
-            {/*<a href="#pricing" className="scroll">Pricing</a>&nbsp; &nbsp;<a href="#">Sign in</a>*/}
-            <a> <Link to="/archives" className="navbar-brand" className="scroll"> Explore </Link> </a>&nbsp; &nbsp;
-            <a> <Link to="/" className="navbar-brand" className="scroll"> About Us </Link> </a>
-            </div>
-            <div className="col-xs-4 text-center logo">
-            <a href="/"><img src="img/logo.png" alt="Logo"/></a>
-            </div>
-            <div className="col-xs-4 text-right navbar-nav signin">
-            {/*<a href="#pricing" className="scroll">Pricing</a>&nbsp; &nbsp;<a href="#">Sign in</a>*/}
-            {userName}&nbsp; &nbsp;{loginOrOut}&nbsp; &nbsp;{register}
-            </div>
-            </div>
+        <div className="cd-logo"><Link to="/"><img src="img/logo.png" alt=""/></Link></div>
 
+            <nav className="cd-main-nav-wrapper">
+            <ul className="cd-main-nav">
+            {userName}
+            <li><a><div className="btn-primary-inverse2"> <Link to="/archives" className="navbar-brand" className="scroll"> Explore </Link> </div></a></li>
+            {loginOrOut}
+            {register}
+        </ul>
+        </nav>
 
-
-        </div>
-        </header>
+        <a href="#0" className="cd-nav-trigger">Menu<span></span></a>
+            </header>
         <div>
 
             {this.props.children}
