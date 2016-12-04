@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link,Router, Route, IndexRoute, hashHistory } from "react-router";
-import ReactTypewrite from 'react-typewrite';
+
 
 class Home extends Component {
 
