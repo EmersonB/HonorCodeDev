@@ -95,7 +95,7 @@ class Archives extends Component {
         //console.log(this.state.searched)
         var currentProjects = this.state.searched.map((project,i) =>{
                 if(project!=null){
-                var head = <h3>{project.name} <Link to={"/project/"+project.id}><i className="fa fa-hand-o-right" aria-hidden="true"></i></Link></h3>
+                var head = <h3>{project.name} <Link to={"/project/"+project.id}><h4 className="fa fa-hand-o-right" aria-hidden="true"></h4></Link></h3>
                 return (
             <div>
             <ListGroupItem header={head} key = {project.id}>

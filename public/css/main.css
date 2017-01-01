@@ -1,19 +1,5 @@
-/*!
- * SNOW Landing Page Theme
- *
- * Created by Visual Soldiers
- * Visit us at http://www.visualsoldiers.com
- *
- * Handcrafted with love in Atlanta!
- */
-
-
-/* ==========================================================================
-   Global styles
-   ========================================================================== */
-
 h1, h2, h3, h4, h5, p, .btn, .navbar-nav a, .form-control, .list-inline, small, #pricing {
-  font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 ::-webkit-scrollbar {
     -webkit-appearance: none;
@@ -31,15 +17,15 @@ h1, h2, h3, h4, h5, p, .btn, .navbar-nav a, .form-control, .list-inline, small, 
     bottom:0;
 }
 p, .lead {
-	font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 h1 {
-  font-size: 75px;
-  line-height: 55px;
-  letter-spacing: -1px;
-  color: #E74C3C;
-  font-weight: 700;
+    font-size: 75px;
+    line-height: 55px;
+    letter-spacing: -1px;
+    color: #E74C3C;
+    font-weight: 700;
 }
 .h21 {
     font-size: 40px;
@@ -50,26 +36,26 @@ h1 {
 }
 
 h2 {
-  font-size: 40px;
-  line-height: 40px;
-  etter-spacing: -0.5px;
-  color: #2C3E50;
-  font-weight: 700;
+    font-size: 40px;
+    line-height: 40px;
+    etter-spacing: -0.5px;
+    color: #2C3E50;
+    font-weight: 700;
 }
 
 h3 {
-  font-size: 16px;
-  line-height: 30px;
-  letter-spacing: 0px;
-  color: #231f20;
-  font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0px;
+    color: #231f20;
+    font-weight: 700;
 }
 
 .lead {
-  font-size: 21px;
-  line-height: 26px;
-  color: #ffffff;
-  font-weight: 400;
+    font-size: 21px;
+    line-height: 26px;
+    color: #ffffff;
+    font-weight: 400;
 }
 .lead2 {
     font-size: 21px;
@@ -79,55 +65,55 @@ h3 {
 }
 
 p {
-  font-size: 17px;
-  line-height: 22px;
-  color: #929496;
-  font-weight: 400;
+    font-size: 17px;
+    line-height: 22px;
+    color: #929496;
+    font-weight: 400;
 }
 
 /*------------------Utilities---------------------*/
 a {
-  color: inherit;
-  font-weight: inherit;
-  font-size: inherit;
-  text-decoration: none;
+    color: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    text-decoration: none;
 }
 
 a:hover, a:focus {
-  text-decoration: none;
-  color: #231f20;
-  -webkit-transition: all 0.35s ease-in-out;
-  -moz-transition: all 0.35s ease-in-out;
-  -o-transition: all 0.35s ease-in-out;
-  transition: all 0.35s ease-in-out;
+    text-decoration: none;
+    color: #ffffff;
+    -webkit-transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
 }
 
 .fa-lg {
-  font-size: 1.33333em;
-  line-height: 0.75em;
-  vertical-align: -10%;
+    font-size: 1.33333em;
+    line-height: 0.75em;
+    vertical-align: -10%;
 }
 
 ::selection {
-	background: #231f20; /* Safari */
-	color: #FFFFFF;
+    background: #231f20; /* Safari */
+    color: #FFFFFF;
 }
 ::-moz-selection {
-	background: #231f20; /* Firefox */
-	color: #FFFFFF;
+    background: #231f20; /* Firefox */
+    color: #FFFFFF;
 }
 
 
 /*------------------Buttons---------------------*/
 .btn:focus {
-  outline: 0px auto -webkit-focus-ring-color;
-  outline: none;
+    outline: 0px auto -webkit-focus-ring-color;
+    outline: none;
 }
 
 .btn {
-  text-transform: uppercase;
-  border-radius: 0px;
-  border: none;
+    text-transform: uppercase;
+    border-radius: 0px;
+    border: none;
 }
 
 .btn-login{
@@ -139,60 +125,60 @@ a:hover, a:focus {
 }
 
 .btn-lg {
-  font-size: 13px;
-  line-height: 1.33;
-  padding: 22px 30px;
-  font-weight: 400;
-  letter-spacing: 1px;
+    font-size: 13px;
+    line-height: 1.33;
+    padding: 22px 30px;
+    font-weight: 400;
+    letter-spacing: 1px;
 }
 
 .btn-sm {
-  font-size: 11px;
-  line-height: 1.33;
-  padding: 10px 18px;
-  font-weight: 400;
+    font-size: 11px;
+    line-height: 1.33;
+    padding: 10px 18px;
+    font-weight: 400;
 }
 
 .btn-wide {
-  width: 100%;
-  font-size: 13px;
-  line-height: 1.33;
-  padding: 18px 28px;
-  font-weight: 400;
-  letter-spacing: 1px;
+    width: 100%;
+    font-size: 13px;
+    line-height: 1.33;
+    padding: 18px 28px;
+    font-weight: 400;
+    letter-spacing: 1px;
 }
 
 .btn-primary {
-  background-color:#FFFFFF;
-  color: #3498DB;
+    background-color:#FFFFFF;
+    color: #B9EEFB;
 }
 .btn-primary2 {
     background-color:#FFFFFF;
-    color: #3498DB;
+    color: #B9EEFB;
 }
 .btn-primary-inverse {
-    background-color:#3498DB;
+    background-color:#B9EEFB;
     color: #FFFFFF;
     border-radius: 4px;
 }
 .btn-primary-inverse2 {
-    background-color:#3498DB;
+    background-color:#B9EEFB;
     color: #FFFFFF;
     border-radius: 4px;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
-  background-color: #3498DB;
-  color: #ffffff;
-  -webkit-transition: all 0.35s ease-in-out;
-  -moz-transition: all 0.35s ease-in-out;
-  -o-transition: all 0.35s ease-in-out;
-  transition: all 0.35s ease-in-out;
+    background-color: #B9EEFB;
+    color: #ffffff;
+    -webkit-transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
 }
 
 .btn-primary-inverse:hover, .btn-primary-inverse:focus, .btn-primary-inverse:active, .btn-primary-inverse.active{
     background-color: #FFFFFF;
-    color: #3498DB;
+    color: #B9EEFB;
     -webkit-transition: all 0.35s ease-in-out;
     -moz-transition: all 0.35s ease-in-out;
     -o-transition: all 0.35s ease-in-out;
@@ -202,17 +188,17 @@ a:hover, a:focus {
 }
 
 .btn-secondary {
-  background-color: #ffffff;
-  color: #E74C3C;
+    background-color: #ffffff;
+    color: #E74C3C;
 }
 
 .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary.active {
-  background-color: #E74C3C;
-  color: #ffffff;
-  -webkit-transition: all 0.35s ease-in-out;
-  -moz-transition: all 0.35s ease-in-out;
-  -o-transition: all 0.35s ease-in-out;
-  transition: all 0.35s ease-in-out;
+    background-color: #E74C3C;
+    color: #ffffff;
+    -webkit-transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
 }
 
 .btn-secondary-inverse {
@@ -291,31 +277,31 @@ a:hover, a:focus {
 }
 
 .black {
-  color: #231f20;
+    color: #231f20;
 }
 
 .blue {
-  color: #70cbce;
+    color: #70cbce;
 }
 
 .white {
-  color: #ffffff;
+    color: #ffffff;
 }
 
 .black-bg {
-  background: #231f20;
+    background: #231f20;
 }
 
 .blue-bg {
-  background: #70cbce;
+    background: #70cbce;
 }
 
 .white-bg {
-  background: #ffffff;
+    background: #ffffff;
 }
 
 .purple-bg {
-	background: #6d3f96;
+    background: #6d3f96;
 }
 
 
@@ -324,48 +310,80 @@ a:hover, a:focus {
    Nav Styles
    ========================================================================== */
 
-.navbar {
-    border: 0px solid rgba(0, 0, 0, 0);
-    background: #70cbce;
-    margin: auto;
-    min-height: 60px;
-    padding-top: 8px;
-    position: fixed;
-    top: -60px;
-    transition: top 0.4s ease 0s;
+.navbar-nav>li>a.profile-image {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
-.navbar.open {
-    top: 0;
-}
-
-.navbar-inverse .navbar-nav > li > a, .navbar-nav a {
-    color: #2C3E50;
-    font-size: 14px;
-    letter-spacing: 1px;
-}
-
-.navbar-inverse .navbar-nav > li > a:hover {
-    color: #2C3E50;
-    opacity: 0.6;
-}
-
-.nav > li > a {
-    position: relative;
-    display: block;
-    padding: 10px 10px;
-}
-
-.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
-    border-color: #4ec3cd;
-}
-
-.navbar-inverse .navbar-toggle {
+/*
+ * Navbar
+ */
+.navbar-top {
+    margin-bottom: 0px;
+    position: absolute;
+    background-color: transparent;
+    background: transparent;
     border-color: transparent;
+    /*background: url('../img/weather.png') repeat;*/
+}
+.transparent {
+    background-color: transparent;
+}
+.navbar-top .navbar-brand {
+    color: #ffffff;
+}
+.navbar-top .navbar-brand:hover, .navbar-top .navbar-brand:focus {
+    color: #ecf0f1;
+}
+.navbar-top .navbar-text {
+    color: #ffffff;
+}
+.navbar-top .navbar-nav > li > a {
+    color: #ffffff;
+}
+.navbar-top .navbar-nav > li > a:hover, .navbar-top .navbar-nav > li > a:focus {
+    color: #ecf0f1;
+    background-color: #B9EEFB;
+}
+.navbar-top .navbar-nav > .active > a, .navbar-top .navbar-nav > .active > a:hover, .navbar-top .navbar-nav > .active > a:focus {
+    color: #ecf0f1;
+    background-color: #B9EEFB;
+}
+.navbar-top .navbar-nav > .open > a, .navbar-top .navbar-nav > .open > a:hover, .navbar-top .navbar-nav > .open > a:focus {
+    color: #ecf0f1;
+    background-color: #B9EEFB;
+}
+.navbar-top .navbar-toggle {
+    border-color: #B9EEFB;
+}
+.navbar-top .navbar-toggle:hover, .navbar-top .navbar-toggle:focus {
+    background-color: transparent;
+}
+.navbar-top .navbar-toggle .icon-bar {
+    background-color: #ffffff;
+}
+.navbar-top .navbar-collapse,
+.navbar-top .navbar-form {
+    border-color: #ffffff;
+}
+.navbar-top .navbar-link {
+    color: #ffffff;
+}
+.navbar-top .navbar-link:hover {
+    color: #ecf0f1;
 }
 
-.logo img {
-	margin-top: 10px;
+@media (max-width: 767px) {
+    .navbar-top .navbar-nav .open .dropdown-menu > li > a {
+        color: #ffffff;
+    }
+    .navbar-top .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-top .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #ecf0f1;
+    }
+    .navbar-top .navbar-nav .open .dropdown-menu > .active > a, .navbar-top .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-top .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: #ecf0f1;
+        background-color: #3174b0;
+    }
 }
 
 
@@ -374,18 +392,18 @@ a:hover, a:focus {
    Main styles
    ========================================================================== */
 /*header {*/
-    /*!*box-shadow: 1px 1px 1px #888888;*!*/
-  /*width: 100%;*/
-  /*padding: 20px 10px 60px 10px;*/
-  /*height: 0vh;*/
-  /*overflow: hidden;*/
-  /*background-size: cover;*/
-  /*-webkit-background-size: cover;*/
-  /*-moz-background-size: cover;*/
-  /*-o-background-size: cover;*/
+/*!*box-shadow: 1px 1px 1px #888888;*!*/
+/*width: 100%;*/
+/*padding: 20px 10px 60px 10px;*/
+/*height: 0vh;*/
+/*overflow: hidden;*/
+/*background-size: cover;*/
+/*-webkit-background-size: cover;*/
+/*-moz-background-size: cover;*/
+/*-o-background-size: cover;*/
 /*}*/
 .header2 {
-    background: url(../img/studybg.jpg) no-repeat center center;
+    background: url(../img/arcticback.jpg) no-repeat center center;
     width: 100%;
     padding: 20vh 10px 60px 10px;
     height: 75vh;
@@ -397,18 +415,18 @@ a:hover, a:focus {
 }
 
 /*.header-info {*/
-  /*position: absolute;*/
-  /*bottom: 0;*/
-  /*width: 100%;*/
-    /*height: 60px;*/
-  /*left: 0;*/
-  /*right: 0;*/
-  /*margin-left: 0px;*/
-  /*margin-bottom: 12%;*/
+/*position: absolute;*/
+/*bottom: 0;*/
+/*width: 100%;*/
+/*height: 60px;*/
+/*left: 0;*/
+/*right: 0;*/
+/*margin-left: 0px;*/
+/*margin-bottom: 12%;*/
 /*}*/
 
 .signin {
-  padding-top: 9px;
+    padding-top: 9px;
     color: #2C3E50;
 }
 
@@ -442,50 +460,41 @@ a:hover, a:focus {
     width: 4px;
 }
 @keyframes scrolling {
-0% {
-    opacity: 0;
-    top: 5px;
-}
-30% {
-    opacity: 1;
-    top: 10px;
-}
-100% {
-    opacity: 0;
-    top: 25px;
-}
+    0% {
+        opacity: 0;
+        top: 5px;
+    }
+    30% {
+        opacity: 1;
+        top: 10px;
+    }
+    100% {
+        opacity: 0;
+        top: 25px;
+    }
 }
 
 .pad-xl {
-	padding: 200px 0px;
+    padding: 200px 0px;
 }
 
 .pad-lg {
-	padding: 160px 0px;
+    padding: 160px 0px;
 }
 
 .pad-sm {
-	padding: 80px 0px;
+    padding: 80px 0px;
 }
 
 .pad-xs {
-	padding: 30px 0px;
+    padding: 30px 0px;
 }
 
 
 
 #be-the-first {
-  background: #231f20 no-repeat center center fixed;
+    background: #231f20 no-repeat center center fixed;
     background-color: #2980B9;
-  min-height: 300px;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-#loginUI {
-    background: url(../img/bg2.jpg) #2980B9 no-repeat center center fixed;
     min-height: 300px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -493,9 +502,17 @@ a:hover, a:focus {
     background-size: cover;
 }
 
+#loginUI {
+    background: url(../img/weather.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 hr.line {
-	width: 100%;
-	border: 2px solid;
+    width: 100%;
+    border: 2px solid;
 }
 
 .red {
@@ -504,13 +521,13 @@ hr.line {
 }
 
 .purple {
-	border-color: #6d3f96;
-	color: #6d3f96;
+    border-color: #6d3f96;
+    color: #6d3f96;
 }
 
 .blue {
-	border-color: #2C3E50;
-	color: #2C3E50;
+    border-color: #2C3E50;
+    color: #2C3E50;
 }
 
 .blue2 {
@@ -519,62 +536,47 @@ hr.line {
 }
 
 .yellow {
-	border-color: #fdc05d;
-	color: #fdc05d;
+    border-color: #fdc05d;
+    color: #fdc05d;
 }
-
-.iphone {
-    position: relative;
-    height: 200px;
-}
-
-.iphone img {
-    margin: 0 auto;
-    position: absolute;
-    left: 0;
-    right: 0;
-    width: 100%;
-    max-width: 440px;
-}
-
 
 #invite {
-  background: #f2f2f2;
+    background: #f2f2f2;
 }
 
 .fa-envelope-o {
-  color: #4ec3cd;
-  font-size: 22px;
-  display: block;
-  padding-top: 15px;
-  width: 60px;
-  height: 60px;
-  border: 2px solid #4ec3cd;
-  -moz-border-radius: 30px;
-  -o-border-radius: 30px;
-  -webkit-border-radius: 30px;
-  border-radius: 30px;
-  margin: auto;
+    color: #4ec3cd;
+    font-size: 22px;
+    display: block;
+    padding-top: 15px;
+    width: 60px;
+    height: 60px;
+    border: 2px solid #4ec3cd;
+    -moz-border-radius: 30px;
+    -o-border-radius: 30px;
+    -webkit-border-radius: 30px;
+    border-radius: 30px;
+    margin: auto;
 }
 
 
 
 .news-container {
-  padding: 10px 0px 20px;
-  border-bottom: 1px dotted #d9d9d9;
+    padding: 10px 0px 20px;
+    border-bottom: 1px dotted #d9d9d9;
 }
 
 .news-img {
-  padding-right: 20px;
+    padding-right: 20px;
 }
 
 footer {
-  background: #ffffff;
-  padding: 40px 0px;
+    background: #ffffff;
+    padding: 40px 0px;
 }
 
 .social li a:hover {
-  opacity: 0.5;
+    opacity: 0.5;
 }
 
 
@@ -583,51 +585,51 @@ footer {
 
 
 #pricing {
-  background: #70cbce;
+    background: #70cbce;
 }
 
 .pricing-container {
-  padding-left: 0px;
-  padding-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 .pricing-table {
-  background: transparent;
-  margin-bottom: 50px;
-  margin-top: 0px;
-  -webkit-transition: all 0.25s ease-in-out;
-  -moz-transition: all 0.25s ease-in-out;
-  -o-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
+    background: transparent;
+    margin-bottom: 50px;
+    margin-top: 0px;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
 }
 .pricing-table.active {
-  box-shadow: 0px 0px 12px rgba(41,46,50,0.6);
-  position: absolute;
-  margin: auto;
-  z-index: 200;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+    box-shadow: 0px 0px 12px rgba(41,46,50,0.6);
+    position: absolute;
+    margin: auto;
+    z-index: 200;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .pricing-table:hover {
-  margin-top: -10px;
-  -webkit-transition: all 0.25s ease-in-out;
-  -moz-transition: all 0.25s ease-in-out;
-  -o-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
+    margin-top: -10px;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
 }
 
 .pricing-table li {
-  padding-left: 20px;
-  padding-right: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .headline {
-  background: #231f20;
-  color: #FFFFFF;
-  padding: 10px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+    background: #231f20;
+    color: #FFFFFF;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .price {
@@ -641,49 +643,49 @@ footer {
 
 
 .pricing-table:hover li.price  {
-  background: #303236;
-  -webkit-transition: all 0.85s ease-in-out;
-  -moz-transition: all 0.85s ease-in-out;
-  -o-transition: all 0.85s ease-in-out;
-  transition: all 0.85s ease-in-out;
+    background: #303236;
+    -webkit-transition: all 0.85s ease-in-out;
+    -moz-transition: all 0.85s ease-in-out;
+    -o-transition: all 0.85s ease-in-out;
+    transition: all 0.85s ease-in-out;
 }
 
 .price small {
-  font-weight: 300;
-  color: #929496;
+    font-weight: 300;
+    color: #929496;
 }
 
 .info {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  font-weight: 300;
-  font-size: 13px;
-  color: #929496;
-  background: #ffffff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: 300;
+    font-size: 13px;
+    color: #929496;
+    background: #ffffff;
 }
 
 .features {
-  color: #231f20;
-  font-weight: bold;
-  padding-top: 12px;
-  padding-bottom: 15px;
-  border-bottom: 1px dotted #E8EAEA;
-  background: #ffffff
+    color: #231f20;
+    font-weight: bold;
+    padding-top: 12px;
+    padding-bottom: 15px;
+    border-bottom: 1px dotted #E8EAEA;
+    background: #ffffff
 }
 
 .features.first {
-  border-top: 1px dotted #E8EAEA;
+    border-top: 1px dotted #E8EAEA;
 }
 
 .features.last {
-  padding-top: 17px;
-  padding-bottom: 20px;
+    padding-top: 17px;
+    padding-bottom: 20px;
 }
 
 .features.last a {
-	color: #70cbce;
-	font-size: 14px;
-	letter-spacing: 1px;
+    color: #70cbce;
+    font-size: 14px;
+    letter-spacing: 1px;
 }
 
 .pricing-container .btn {
@@ -747,7 +749,7 @@ footer {
 }
 
 ul {
-   list-style:none;
+    list-style:none;
 }
 
 /* ==========================================================================
@@ -804,24 +806,24 @@ form .input-icon {
 /* Landscape phones and down */
 @media (max-width: 480px) {
 
-.btn-lg {
-  font-size: 12.5px;
-  line-height: 1.33;
-  padding: 16px 13px;
-  letter-spacing: 0px;
-}
+    .btn-lg {
+        font-size: 12.5px;
+        line-height: 1.33;
+        padding: 16px 13px;
+        letter-spacing: 0px;
+    }
 
-.btn-wide {
-  width: 100%;
-  font-size: 12.5px;
-  line-height: 1.33;
-  padding: 16px 13px;
-  letter-spacing: 0px;
-}
+    .btn-wide {
+        width: 100%;
+        font-size: 12.5px;
+        line-height: 1.33;
+        padding: 16px 13px;
+        letter-spacing: 0px;
+    }
 
-#be-the-first {
-      background-attachment: scroll;
-  }
+    #be-the-first {
+        background-attachment: scroll;
+    }
 
 }
 
@@ -829,9 +831,9 @@ form .input-icon {
 /* Landscape phone to portrait tablet */
 @media (min-width: 481px) and (max-width: 767px) {
 
-#be-the-first {
-      background-attachment: scroll;
-  }
+    #be-the-first {
+        background-attachment: scroll;
+    }
 
 }
 
@@ -839,9 +841,9 @@ form .input-icon {
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 991px) {
 
-#be-the-first {
-      background-attachment: scroll;
-  }
+    #be-the-first {
+        background-attachment: scroll;
+    }
 
 }
 
@@ -1401,5 +1403,154 @@ header::before {
     }
 }
 
+html {
+    background: url(../img/weather.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 1500px;
+}
+
+.rect {
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 20px;
+    position:absolute;
+    top:50%;
+    margin-top:-50px; /* this is half the height of your div*/
+    margin-left: 5%; /*this is half of width of your div*/
+    margin-right: 5%;
+}
+
+.container2{
+    width: 300px;
+    height:300px;
+    margin: 0 auto;
+    position:relative;
+    overflow:hidden;
+}
+
+.planet{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:url(../img/planet.png) no-repeat center center;
+}
+
+.rocket{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:url(../img/rocket.png) no-repeat 50px center;
+
+    /* Chrome still requires the -webkit- prefix */
+    -webkit-animation:orbit 2s linear infinite;
+    animation:orbit 2s linear infinite;
+
+    transition:background-position 0.8s;
+}
+
+.container:hover .rocket{
+    background-position:80px center;
+}
+
+/* Define the keyframes of the animation */
+
+@-webkit-keyframes orbit {
+    from {
+        -webkit-transform:rotate(0deg);}
+    to {
+        -webkit-transform:rotate(360deg);
+    }
+}
+
+@keyframes orbit {
+    from {
+        transform:rotate(0deg);
+
+        /* I am including the -webkit-transform properties, because
+           Chrome might start supporting keyframe without prefix in the future,
+           but we can't be certain whether it will support prefix-free transform
+           at the same time */
+
+        -webkit-transform:rotate(0deg);}
+    to {
+        transform:rotate(360deg);
+        -webkit-transform:rotate(360deg);
+    }
+}
+.container3{
+
+    /* How pronounced should the 3D effects be */
+    perspective: 800px;
+    -webkit-perspective: 800px;
+
+    background: transparent;
+    width:480px;
+    height:480px;
+    margin:0 auto;
+    border-radius:6px;
+    position:relative;
+}
+
+.iphone-front,
+.iphone-back{
+
+    /* Enable 3D transforms */
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+
+    /* We are using two separate divs for the front and back of the
+       phone. This will hide the divs when they are flipped, so that the
+       opposite side can be seen:  */
+
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+
+    width:200px;
+    height:333px;
+
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin:-166px 0 0 -100px;
+
+    background:url(../img/iphone.png) no-repeat left center;
+
+    /* Animate the transitions */
+    transition:0.8s;
+}
+
+.iphone-back{
+
+    /* The back side is flipped 180 deg by default */
+    transform:rotateY(180deg);
+    -webkit-transform:rotateY(180deg);
+
+    background-position:right center;
+}
+
+.container3:hover .iphone-front{
+    /* When the container is hovered, flip the front side and hide it .. */
+    transform:rotateY(180deg);
+    -webkit-transform:rotateY(180deg);
+}
+
+.container3:hover .iphone-back{
+    /* .. at the same time flip the back side into visibility */
+    transform:rotateY(360deg);
+    -webkit-transform:rotateY(360deg);
+}
+
+.funtext {
+    /* Using the custom font we've included in the HTML tab: */
+    padding-right: 10px;
+    padding-left: 10px;
+}
 
 
